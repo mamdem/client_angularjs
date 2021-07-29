@@ -1,0 +1,47 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bienvenu dans notre site</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row" style="">
+		<div class="col-md-12" >
+			<h2>Bâtimat <b>A louer</b></h2>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+			<!-- Carousel indicators -->
+			
+			<!-- Wrapper for carousel items -->
+			<div class="carousel-inner" >
+				<div class="row">
+					<div class="col-sm-3" *ngFor="let bien of biens">
+							<div class="img-box">
+								<img style="width: 250px; height: 180px;" src="https://edito.selogerneuf.com/sites/default/files/styles/manual_crop_735x412/public/article/image/construction-neuve.jpg?itok=0EkjSZX7" class="img-responsive img-fluid" alt="">
+							</div>
+							<div style="text-align: center; font-weight: bold;" class="thumb-content">
+								<h3 >{{bien.nom}}</h3>
+								<p class="item-price">{{bien.prix}} FCFA<span> /mois</span></p>
+								<a href="#" class="btn btn-primary">Voir details</a>
+							</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>                                		                            

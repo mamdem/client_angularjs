@@ -1,0 +1,51 @@
+<br/><br/><br/>
+<div class="container">
+	<h1>Inscription Visiteur</h1>
+<form #signupForm="ngForm" (ngSubmit)="onAddPerson(signupForm)">
+	<div class="form-group col-sm-4">
+	  <label for="exampleInputPassword1">Nom</label>
+	  <input type="text" ngModel name="nom" class="form-control" id="exampleInputPassword1" placeholder="Nom">
+	</div>
+	<div class="form-group col-sm-4">
+		<label for="exampleInputPassword1">Prenom</label>
+		<input type="text" ngModel name="prenom" class="form-control" id="exampleInputPassword1" placeholder="Prenom">
+	</div>
+	<div class="form-group col-sm-4">
+		<label for="exampleInputPassword1">Adresse</label>
+		<input type="text" ngModel name="adresse" class="form-control" id="exampleInputPassword1" placeholder="Adresse">
+	</div><br/>
+	<div class="form-group col-sm-4">
+		<label for="exampleInputPassword1">Email</label>
+		<input type="text" ngModel name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+	  </div>
+	  <div class="form-group col-sm-4">
+		  <label for="exampleInputPassword1">Nationalité</label>
+		  <input type="text" ngModel name="nationalite" class="form-control" id="exampleInputPassword1" placeholder="Nationalité">
+	  </div>
+	  <div class="form-group col-sm-4">
+		<label for="exampleInputPassword1">Telephone</label>
+		<input type="text" ngModel name="telephone" class="form-control" id="exampleInputPassword1" placeholder="Telephone">
+	</div><br/><br/><br/>
+	  <div class="form-group col-sm-4">
+		<label for="exampleInputPassword1">Login</label>
+		<input type="text" ngModel name="login" class="form-control" id="exampleInputPassword1" placeholder="Login">
+	</div>
+	  <div class="form-group col-sm-4">
+		<label for="exampleInputPassword1">Password</label>
+		<input type="password" ngModel name="pwd" class="form-control" id="exampleInputPassword1" placeholder="Password">
+	  </div>
+
+	  <input *ngIf="false" value="0" type="text" ngModel name="type" class="form-control" id="exampleInputPassword1" placeholder="Password">
+	 
+	  <div class="form-group col-sm-4">
+		<label for="exampleInputPassword1">Sexe</label><br/>
+		<input type="radio" name="sexe" value="email" checked>
+		<label for="contactChoice1" style="margin-right: 20px;"> Homme</label>
+		<input type="radio" name="sexe" value="phone">
+		<label for="contactChoice2">Femme</label>
+	  </div><br/>
+	  <div class="form-group col-sm-4">
+		<button type="submit" ngModel id="submit_btn"  name="inscrire" class="btn btn-primary">S'inscrire</button>
+	  </div>
+  </form>
+  </div>
