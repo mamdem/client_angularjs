@@ -19,12 +19,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { BienService } from './services/bien.service';
 import { AccueilComponent } from './accueil/accueil.component';
 import { FormsModule } from '@angular/forms';
+import { EspaceAgentComponent } from './espace-agent/espace-agent.component';
 
 const appRoutes: Routes=[
   { path:'signin', component: SigninComponent},
-  { path: '', component: AccueilComponent},
-  { path: 'menu', component: MenuComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'accueil', component: AccueilComponent},
+  { path: '', component: MenuComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'espaceagent', component: EspaceAgentComponent}
 ];
 
 @NgModule({
@@ -34,7 +36,8 @@ const appRoutes: Routes=[
     SigninComponent,
     CardComponent,
     LoginComponent,
-    AccueilComponent
+    AccueilComponent,
+    EspaceAgentComponent
   ],
   imports: [
     BrowserModule,

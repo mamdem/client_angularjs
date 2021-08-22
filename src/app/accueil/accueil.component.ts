@@ -17,8 +17,6 @@ export class AccueilComponent implements OnInit {
   @ViewChild(MatSidenav) 
   sidenav!:MatSidenav;
 
- 
-
   constructor(private observer: BreakpointObserver,private personneService: PersonneService, private router: Router, public vari: Variables) { 
     
   }
@@ -34,6 +32,7 @@ export class AccueilComponent implements OnInit {
     });
   }
 
+
   public getUserSession(): void{
     this.personneService.getUserById(sessionStorage.getItem('idpers')+"").subscribe(
       (response: Personne)=>{
@@ -44,15 +43,29 @@ export class AccueilComponent implements OnInit {
     )
   }
 
+  public becomeAgent(): void{
+    this.user.type=1;
+    document.getElementById('becomeagent_btn')?.click();
+    this.personneService.becomeAgent(this.user.idpers+"", this.user).subscribe(
+      (response: Personne)=>{
+        console.log(response);
+      },(error: HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    )
+  }
+
   ngOnInit(): void {
     if(this.vari.isUserLoggedIn())
       this.getUserSession();
+    else
+    this.router.navigateByUrl("/");
   }
 
   public deconnecter(): void{
     sessionStorage.removeItem('idpers');
     alert(this.vari.isUserLoggedIn())
-    this.router.navigateByUrl("/login");
+    this.router.navigateByUrl("/");
     this.sidenav.close();
   }
 }

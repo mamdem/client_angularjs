@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Personne } from '../class/personne';
+import { Variables } from '../global/variables';
 import { PersonneService } from '../services/personne.service';
 
 @Component({
@@ -13,7 +14,7 @@ import { PersonneService } from '../services/personne.service';
 export class SigninComponent implements OnInit {
 
   
-  constructor(private router: Router, private personneService: PersonneService) { }
+  constructor(private router: Router, private personneService: PersonneService, public vari: Variables) { }
 
   ngOnInit(): void {
   }

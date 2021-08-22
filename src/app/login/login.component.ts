@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
         if(response!=null){
           sessionStorage.setItem("idpers", response.idpers+"");
           this.user=response;
-          this.router.navigateByUrl("/");
+          this.router.navigateByUrl("/accueil");
         }else
           alert("Login ou mot de passe incorrect !")
       },(error: HttpErrorResponse)=>{

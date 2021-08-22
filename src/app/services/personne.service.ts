@@ -23,6 +23,10 @@ export class PersonneService{
         return this.http.post<Personne>(`${this.apiServiceUrl}/personne/add`, personne);
     }
 
+    public becomeAgent(idpers: String, personne: Personne): Observable<Personne>{
+        return this.http.put<Personne> (`${this.apiServiceUrl}/personnes/`+idpers, personne);
+    }
+
     public getPersonneByLogin(login: String, pwd: String): Observable<Personne>{
         return this.http.get<Personne>(`${this.apiServiceUrl}/personne/findByLogin?login=`+login+`&pwd=`+pwd);
     }
