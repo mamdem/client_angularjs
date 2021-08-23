@@ -64,7 +64,6 @@ export class AccueilComponent implements OnInit {
 
   public deconnecter(): void{
     sessionStorage.removeItem('idpers');
-    alert(this.vari.isUserLoggedIn())
     this.router.navigateByUrl("/");
     this.sidenav.close();
   }

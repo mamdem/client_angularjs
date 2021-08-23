@@ -1,40 +1,71 @@
-body{
-    background-color: #25274d;
+mat-toolbar{
+    background: #3291df;
+    color: white;
 }
-.contact{
-    padding: 4%;
-    height: 400px;
+
+mat-sidenav{
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #3291df;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
 }
-.col-md-3{
-    background: #ff9b00;
-    padding: 4%;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+
+.content{
+    height: 100%;
+    margin: 16px;
+    margin-left: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: lightgray;
+    border-radius: 10px;
+    
 }
-.contact-info{
-    margin-top:10%;
+
+.filler {
+    flex: 1 1 auto;
+ }
+
+mat-sidenav-container{
+    height: 90%;
 }
-.contact-info img{
-    margin-bottom: 15%;
+
+.menu-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2rem;
+    mat-icon{
+        margin-right: 8px;
+    }
 }
-.contact-info h2{
-    margin-bottom: 10%;
+
+.name{
+    margin: 0;
+    margin-top: 8px;
+    font-weight: normal;
 }
-.col-md-9{
-    background: #fff;
-    padding: 3%;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+
+.designation{
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgray;
 }
-.contact-form label{
-    font-weight:600;
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
-.contact-form button{
-    background: #25274d;
-    color: #fff;
-    font-weight: 600;
-    width: 25%;
-}
-.contact-form button:focus{
-    box-shadow:none;
+
+mat-divider{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
 }

@@ -10,7 +10,13 @@
     <span *ngIf="vari.isUserLoggedIn()">Menu</span>
     <span *ngIf="!vari.isUserLoggedIn()">Bienvenu dans notre site</span>
     <span class = "filler"></span>
-    <a *ngIf="vari.isUserLoggedIn()" (click)="deconnecter()" href="/" style="color: white;">Se deconnecter</a>   
+
+    <button style=" width: 160px;" mat-button class="menu-button" *ngIf="vari.isUserLoggedIn()" 
+    mwlConfirmationPopover popoverTitle="Déconnection"
+    popoverMessage="Souhaiter-vous vraiment vous déconnecter ?" placement="auto" container='body' (confirm)="deconnecter()">
+        <span>Se deconnecter</span> 
+    </button>
+
     <a *ngIf="!vari.isUserLoggedIn()" href="/login" style="color: white;" > Se connecter</a>   
     <a *ngIf="!vari.isUserLoggedIn()" href="/signin" style="color: white; margin-left: 10px;" > S'inscrire</a>   
 </mat-toolbar>
@@ -32,6 +38,7 @@
             <mat-icon>person</mat-icon>
             <span>Profil</span>
         </button>
+        
         <button mat-button class="menu-button">
             <mat-icon>info</mat-icon>
             <span>A propos</span> 
@@ -48,7 +55,6 @@
     <mat-sidenav-content>
         <div >
             <app-card></app-card>
-            
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

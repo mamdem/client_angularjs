@@ -20,6 +20,7 @@ import { BienService } from './services/bien.service';
 import { AccueilComponent } from './accueil/accueil.component';
 import { FormsModule } from '@angular/forms';
 import { EspaceAgentComponent } from './espace-agent/espace-agent.component';
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 
 const appRoutes: Routes=[
   { path:'signin', component: SigninComponent},
@@ -50,6 +51,9 @@ const appRoutes: Routes=[
     MatDividerModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
+    ConfirmationPopoverModule.forRoot({
+      confirmButtonType: 'danger'
+    }),
     FormsModule
   ],
   providers: [PersonneService, BienService],
