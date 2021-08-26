@@ -17,7 +17,23 @@ export class BienService{
         return this.http.get<Bien[]>(`${this.apiServiceUrl}/bien/all`);
     }
 
+    public getBiensByIdpers(idpers: String): Observable<Bien[]>{
+        return this.http.get<Bien[]>(`${this.apiServiceUrl}/bien/getBienByIdpers?idpers=`+idpers);
+    }
+
     public addBien(bien: Bien): Observable<Bien>{
         return this.http.post<Bien>(`${this.apiServiceUrl}/bien/add`, bien);
+    }
+
+    public deleteBien(idbien: string):Observable<Bien>{
+        return this.http.delete<Bien>(`${this.apiServiceUrl}/biens/`+idbien);
+    }
+
+    public getBienByIdbien(idbien: String):Observable<Bien>{
+        return this.http.get<Bien>(`${this.apiServiceUrl}/bien/getBienByIdbiens?idbiens=`+idbien);
+    }
+
+    public editBienByIdbien(idbien: String, bien: Bien):Observable<Bien>{
+        return this.http.put<Bien>(`${this.apiServiceUrl}/biens/`+idbien, bien)
     }
 }

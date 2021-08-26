@@ -5,7 +5,7 @@ mat-toolbar{
 
 mat-sidenav{
     margin: 16px;
-    width: 200px;
+    width: 160px;
     border-right: none;
     background: #3291df;
     color: white;
@@ -24,8 +24,9 @@ mat-sidenav{
     font-size: 2rem;
     color: lightgray;
     border-radius: 10px;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 
 .filler {
     flex: 1 1 auto;
@@ -40,7 +41,7 @@ mat-sidenav-container{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 2rem;
+    font-size: 1.5rem;
     mat-icon{
         margin-right: 8px;
     }

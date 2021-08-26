@@ -1,5 +1,5 @@
 export interface  Bien{
-    idbien: number,
+    idbiens: string,
     categorie: Date,
     description: String,
     nbpiece: number,
