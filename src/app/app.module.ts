@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { EspaceAgentComponent } from './espace-agent/espace-agent.component';
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 import { DetailBienComponent } from './detail-bien/detail-bien.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes=[
   { path:'signin', component: SigninComponent},
@@ -40,7 +41,8 @@ const appRoutes: Routes=[
     LoginComponent,
     AccueilComponent,
     EspaceAgentComponent,
-    DetailBienComponent
+    DetailBienComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
