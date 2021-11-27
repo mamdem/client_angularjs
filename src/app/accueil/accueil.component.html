@@ -1,57 +1,109 @@
-<mat-toolbar>
-    <button  mat-icon-button *ngIf="sidenav.mode==='side' && vari.isUserLoggedIn()" (click)="sidenav.toggle()">
-        <mat-icon *ngIf="!sidenav.opened">
-            menu
-        </mat-icon>
-        <mat-icon *ngIf="sidenav.opened">
-            close
-        </mat-icon>
-    </button>
-    <span *ngIf="vari.isUserLoggedIn()">Menu</span>
-    <span *ngIf="!vari.isUserLoggedIn()">Bienvenu dans notre site</span>
-    <span class = "filler"></span>
+<!--Voici ce que j'ai ajouté-->
+<header>
+    <nav id="div_1">
 
-    <button style=" width: 160px;" mat-button class="menu-button" *ngIf="vari.isUserLoggedIn()" 
-    mwlConfirmationPopover popoverTitle="Déconnection"
-    popoverMessage="Souhaiter-vous vraiment vous déconnecter ?" placement="auto" container='body' (confirm)="deconnecter()">
-        <span>Se deconnecter</span> 
-    </button>
+        <nav class="navbar  navbar-expand " id="nav_1">
+            <div class="row  div_left">
 
-    <a *ngIf="!vari.isUserLoggedIn()" href="/login" style="color: white;" > Se connecter</a>   
-    <a *ngIf="!vari.isUserLoggedIn()" href="/signin" style="color: white; margin-left: 10px;" > S'inscrire</a>   
-</mat-toolbar>
+                <li class="li_div1"><a id="a1" class="" href="#" onclick="return false;">3dtandks@gmail.com </a></li>
+                <li class="active li_div1"><span>77 389 90 92 </span></li>
+                <li class="li_div1"><span>Lun-Ven 08h - 17h </span></li>
+            </div>
+            <div class="row div_right ">
+                <li class="li_div1" id="li2" *ngIf="vari.isUserLoggedIn()" mwlConfirmationPopover
+                    popoverTitle="Déconnection" popoverMessage="Souhaiter-vous vraiment vous déconnecter ?"
+                    placement="auto" container='body' (confirm)="deconnecter()">
 
-<mat-sidenav-container >
+                    <a style="color:white;" class="btn btn-outline-primary my-2 my-sm-0">
+                        Se deconnecter <span class="glyphicon glyphicon-log-out"></span>
+                    </a>
+                </li>
+
+                <a *ngIf="!vari.isUserLoggedIn()" href="/login" style="color: white;"> Se connecter</a>
+                <a *ngIf="!vari.isUserLoggedIn()" href="/signin" style="color: white; margin-left: 10px;">
+                    S'inscrire</a>
+
+
+            </div>
+        </nav>
+
+        <nav class=" border-bottom " id="nav_2">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <!--La ou j'ai mis l'icone de menu -->
+                    <button class="btn-outline-info" mat-icon-button
+                        *ngIf="sidenav.mode==='side' && vari.isUserLoggedIn()" (click)="sidenav.toggle()">
+                        <mat-icon  style="color:black; " class="glyphicon glyphicon-th-list"*ngIf="!sidenav.opened">
+                            
+                        </mat-icon>
+                        <mat-icon style="color:black;"  class="glyphicon glyphicon-remove " *ngIf="sidenav.opened">
+                           
+                        </mat-icon>
+                    </button>
+                    <p class="btn  my-2 my-sm-0 a_div2" style="color: black;font-size: large;"
+                        *ngIf="vari.isUserLoggedIn()">Menu</p>
+                    <p *ngIf="!vari.isUserLoggedIn()">Bienvenu(e) chez 3dt&ks </p>
+                    <p class="filler"></p>
+                    <!--Fin menu icone -->
+
+
+                    <span id="nom">3DT&KS Immobilier<i class="glyphicon glyphicon-home"></i></span><br />
+
+                    <form class="col-5 ">
+                        <input type="search" class="form-control" placeholder="Cliquer pour echercher un bien..."
+                            aria-label="Search">
+                    </form>
+                    <button class="btn search btn-primary">Search</button>
+                    <a class="btn  my-2 my-sm-0 a_div2" href="#">
+                        <p></p>
+                    </a>
+
+
+
+                </div>
+
+            </div>
+        </nav>
+    </nav>
+</header>
+<div style="height: 8em;"></div>
+<!--Voici la fin de ce que ce que j'ai ajouté-->
+
+
+<mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav">
 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl1TWQv6q8vSuGpdge066lIrYuVEaRrcK3C9hOmVwrxNv8NOq3XYaO9WbTEqaa5NVEeSo&usqp=CAU" alt="" class="avatar mat-elevation-z8">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl1TWQv6q8vSuGpdge066lIrYuVEaRrcK3C9hOmVwrxNv8NOq3XYaO9WbTEqaa5NVEeSo&usqp=CAU"
+            alt="" class="avatar mat-elevation-z8">
 
-        <h4 class="name" style="margin-bottom: 30px; font-family: Verdana, Geneva, Tahoma, sans-serif;">{{user.prenom}} {{user.nom}}</h4>
+        <h4 class="name" style="margin-bottom: 30px; font-family: Verdana, Geneva, Tahoma, sans-serif;">{{user.prenom}}
+            {{user.nom}}</h4>
+            
+        <button mat-button class="menu-button" >
+            <mat-icon class="glyphicon glyphicon-home"></mat-icon>
+            <span class="span_menu_vertical">Accueil</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon class="glyphicon glyphicon-user"></mat-icon>
+            <span class="span_menu_vertical">Profil</span>
+        </button>
 
         <button mat-button class="menu-button">
-            <mat-icon>home</mat-icon>
-            <span>Accueil</span>
+            <mat-icon class="glyphicon glyphicon-info-sign "></mat-icon>
+            <span class="span_menu_vertical">A propos</span>
         </button>
         <button mat-button class="menu-button">
-            <mat-icon>person</mat-icon>
-            <span>Profil</span>
+            <mat-icon class="glyphicon glyphicon-question-sign"></mat-icon>
+            <span class="span_menu_vertical">Aide</span>
         </button>
-        
-        <button mat-button class="menu-button">
-            <mat-icon>info</mat-icon>
-            <span>A propos</span> 
-        </button>
-        <button mat-button class="menu-button">
-            <mat-icon>help</mat-icon>
-            <span>Aide</span>
-        </button>
-        <br/><br/>
-        <a *ngIf="user.type!=1" href="/accueil" id="becomeagent_btn" (click)="becomeAgent()" style="color: white; font-size: 20px;" >Devenir agent</a>
-        <a *ngIf="user.type===1" href="/espaceagent" style="color: white; font-size: 20px;" >Espace agent</a>   
+        <br /><br />
+        <a *ngIf="user.type!=1" href="/accueil" id="becomeagent_btn" (click)="becomeAgent()"
+            style="color: white; font-size: 20px;">Devenir agent</a>
+        <a *ngIf="user.type===1" href="/espaceagent" style="color: white; font-size: 20px;">Espace agent</a>
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <div >
+        <div>
             <app-card></app-card>
         </div>
     </mat-sidenav-content>

@@ -1,9 +1,70 @@
-<mat-toolbar>
+<!--Le contenu est nouveau, j'ai tout enlevé--> 
+<body>
+<header>
+<nav id="div_1"  >  
+<nav class="navbar  navbar-expand " id="nav_1"  >
+    <div class="row  div_left" >
+        <li class="li_div1"><a id="a1"class="" href="#" onclick="return false;">3dtandks@gmail.com  </a></li>
+        <li class="active li_div1"><span>77 389 90 92 </span></li>
+        <li class="li_div1"><span>Lun-Ven 08h - 17h </span></li>
+    </div>
+    <div class="row div_right" >
+            <li class="li_div1">
+                <a class="btn btn-outline-primary my-2 my-sm-0"href="/login">
+                    <span class="glyphicon glyphicon-user"></span> Se connecter</a>
+            </li>   
+            
+        <li  class="li_div1"id="li2">
+            <a  class="btn btn-outline-primary my-2 my-sm-0"href="/signin">
+                <span class="glyphicon glyphicon-log-in"></span> S'inscrire
+            </a>
+        </li>
+   
+    </div>
+  </nav>
+ 
+  <nav class=" border-bottom "  id="nav_2"  >
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
     
-    <span>Bienvenu dans notre site</span>
-    <span class = "filler"></span>
-    <a href="/login" style="color: white;" > Se connecter</a>   
-    <a href="/signin" style="color: white; margin-left: 10px;" > S'inscrire</a>   
-</mat-toolbar>
+        <span id="nom">3DT&KS Immobilier<i class="glyphicon glyphicon-home"></i></span><br/>
+        
+        <form class="col-5 ">
+          <input type="search" class="form-control" placeholder="Cliquer pour echercher un bien..." aria-label="Search">
+        </form>
+        <button class="btn search btn-primary">Search</button>
+        <a  class="btn  my-2 my-sm-0 a_div2" href="#footer"><p>A propos de nous</p></a>
+      
+        <a  class="btn  my-2 my-sm-0 a_div2"href="#"><p>Accueil</p></a>
+        
+      </div>
+  
+    </div>
+  </nav> 
+</nav> 
+</header>
 
-<app-card></app-card>
+  <div>
+      <div style="height: 10em;"></div>
+  <div id="div_3" class="well">
+    <img id="dernier_image" class="img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnQc_qQsQ25V-L5a_7FnZx6Ctzzek6SGoFCw&usqp=CAU" alt="">
+    <img  class="img-thumbnail" src="./assets/d.jpg" alt="">
+    <img  class="img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8gsYomSUb7tbYycYnObfOJ-RfX369c7zIIA&usqp=CAU" alt="">
+    <img  class=" img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2QT63fjUQ7VB2TDzwOaMbEJsIeOCj_uC2IQ&usqp=CAU" alt="">
+    
+  </div>
+</div>
+<div id="card">
+    <div class="row" style="height: 0em;">
+		<span class="nos_services" >
+            3dt&Ks, des biens de qualite a des prix immbatables
+			<span  class=" nos_services glyphicon glyphicon-hand-down"></span>
+			
+		</span>
+	</div>
+			
+  <app-card></app-card>
+</div>
+<app-footer id="footer"></app-footer>
+</body>
+

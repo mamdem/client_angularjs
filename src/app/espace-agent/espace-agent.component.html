@@ -10,13 +10,13 @@
   <span *ngIf="vari.isUserLoggedIn()">Menu</span>
   <span *ngIf="!vari.isUserLoggedIn()">Bienvenu dans notre site</span>
   <span class = "filler"></span>
-
-  <button style=" width: 160px;" mat-button class="menu-button" *ngIf="vari.isUserLoggedIn()" 
+<div id="div_dec" class="btn btn-outline-danger" style="color: black;">
+  <button  class=""style=" width: 160px;" mat-button class="" *ngIf="vari.isUserLoggedIn()" 
   mwlConfirmationPopover popoverTitle="Déconnection"
   popoverMessage="Souhaiter-vous vraiment vous déconnecter ?" placement="auto" container='body' (confirm)="deconnecter()">
-      <span>Se deconnecter</span> 
+      <span style="color: white;">Se deconnecter   </span> <span style="color: white;" class="glyphicon glyphicon-log-out"></span>
   </button>
-
+</div>
   <a *ngIf="!vari.isUserLoggedIn()" href="/login" style="color: white;" > Se connecter</a>   
   <a *ngIf="!vari.isUserLoggedIn()" href="/signin" style="color: white; margin-left: 10px;" > S'inscrire</a>   
 </mat-toolbar>
@@ -118,8 +118,8 @@
                             <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
                           </div>                   
                         </div>-->
-                      <button *ngIf="!editb" (click)="onAddBien(addBienForm)" type="submit" id="submit_btn" ngModel class="btn btn-primary">Publier</button>
-                      <button *ngIf="editb"  (click)='editbien(addBienForm)' type="submit" ngModel class="btn btn-success">Modifier</button>
+                      <button *ngIf="!editb" (click)="onAddBien(addBienForm)" type="submit" id="submit_btn" ngModel class="btn btn-primary">Enregistrer</button>
+                      <button  *ngIf="editb"  (click)='editbien(addBienForm)' type="submit" ngModel class="btn btn-success">Modifier</button>
                     </form>
               </div>
           </div>
